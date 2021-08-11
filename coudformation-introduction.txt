@@ -1,0 +1,12 @@
+ Couldformation is a service by amazon to deploy resources /build your infrastructure by using code.
+ probably known as infrastructure as code (IAC)
+
+ The bulding blocks of IAC is 
+ 1. Templete
+ 2. Stack
+ 3. Changesets
+
+
+ --  we use templetes to create stacks.
+ --  Templete will have the list of resources you want to deploy on your environment.
+ -- we use change sets to update the stacks. 

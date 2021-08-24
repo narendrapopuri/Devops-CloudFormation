@@ -1,0 +1,53 @@
+{
+    "Resources" : {
+        "EC2instacnewithSeruritygroup": {
+        "Type" : "AWS::EC2::Instance",
+            "Properties" : {
+                "AvailabilityZone" : "us-east-1e",
+                "ImageId" : "ami-09e67e426f25ce0d7",
+                "InstanceType" : "t2.micro",
+                "KeyName" : "webserverhosts",
+                "SecurityGroups" : [{"Ref" :"Serversecuritygroup"}]
+                    
+             }
+
+         },
+
+         "Serversecuritygroup" : {
+            "Type" : "AWS::EC2::SecurityGroup",
+            "Properties" : {
+
+                "GroupDescription" : "Enable HTTP access via port 80 and 8080 and SSH By 22",
+                "SecurityGroupIngress" : [
+
+                 {
+                     "IpProtocol" : "tcp",
+                     "FromPort" : "80",
+                     "ToPort" : "80",
+                     "CidrIp" : "0.0.0.0/0"
+                 },
+                 {
+                     "IpProtocol" : "tcp",
+                     "FromPort" : "22",
+                     "ToPort" : "22",
+                     "CidrIp" : "0.0.0.0/0"
+                 },
+                 {
+                     "IpProtocol" : "tcp",
+                     "FromPort" : "8080",
+                     "ToPort" : "8080",
+                     "CidrIp" : "0.0.0.0/0"
+                 }
+
+                ]
+
+              
+
+            }
+                
+            }
+         
+     }
+     
+ }
+

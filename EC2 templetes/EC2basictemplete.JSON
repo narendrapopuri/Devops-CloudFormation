@@ -1,0 +1,16 @@
+{
+    "Resources" : {
+        "FirstEC2" : {
+        "Type" : "AWS::EC2::Instance",
+            "Properties": 
+            {
+                "AvailabilityZone" : "us-east-1e",
+                "ImageId" : "ami-09e67e426f25ce0d7",
+                "InstanceType" : "t2.micro"
+            }
+            
+        }
+
+    }
+}
+
